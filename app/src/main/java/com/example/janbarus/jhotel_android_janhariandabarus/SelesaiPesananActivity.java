@@ -1,4 +1,5 @@
 package com.example.janbarus.jhotel_android_janhariandabarus;
+
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -25,7 +26,7 @@ public class SelesaiPesananActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_selesai_pesanan_activty);
+        setContentView(R.layout.activity_selesai_pesanan);
         Intent i = getIntent();
         Bundle b = i.getExtras();
         if(b!=null){

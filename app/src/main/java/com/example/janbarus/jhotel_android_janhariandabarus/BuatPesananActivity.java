@@ -88,5 +88,3 @@ public class BuatPesananActivity extends AppCompatActivity {
         });
     }
 }
-
-}

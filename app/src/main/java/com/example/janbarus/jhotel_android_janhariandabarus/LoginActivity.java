@@ -1,4 +1,5 @@
 package com.example.janbarus.jhotel_android_janhariandabarus;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.EditText;
