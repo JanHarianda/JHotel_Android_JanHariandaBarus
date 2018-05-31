@@ -1,45 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/train"
     tools:context="com.example.janbarus.jhotel_android_janhariandabarus.MainActivity">
 
-    <LinearLayout
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:visibility="visible">
-
-        <TextView
-            android:id="@+id/TextView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dip"
-            android:text="PILIH KAMAR"
-            android:textColor="#000000"
-            android:textSize="24dip" />
+        android:visibility="visible"
+        android:background="@drawable/backhotel2"
+        >
 
         <ExpandableListView
-            android:id="@+id/expandHotel"
+            android:id="@+id/lvExp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:divider="#f00"
-            android:listSelector="#36f"></ExpandableListView>
+            android:listSelector="#36f">
+
+        </ExpandableListView>
+
 
         <Button
             android:id="@+id/pesanan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/expandHotel"
-            android:layout_gravity="center"
-            android:text="Cancel or Finish" />
-    </LinearLayout>
+            android:text="Pesanan"
+            />
 
+    </LinearLayout>
 
 
 </android.support.constraint.ConstraintLayout>

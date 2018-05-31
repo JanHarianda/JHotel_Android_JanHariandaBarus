@@ -1,5 +1,6 @@
 package com.example.janbarus.jhotel_android_janhariandabarus;
 
+import android.widget.BaseExpandableListAdapter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -9,8 +10,11 @@ import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
+
+/**
+ * Created by Hamba Elektronika on 05/05/2018.
+ */
 
 public class MenuListAdapter extends BaseExpandableListAdapter {
 
@@ -39,8 +43,7 @@ public class MenuListAdapter extends BaseExpandableListAdapter {
     public View getChildView(int groupPosition, final int childPosition,
                              boolean isLastChild, View convertView, ViewGroup parent) {
 
-        final String childText = ((Room) getChild(groupPosition, childPosition)).getRoomNumber().toString();
-        final String childText1 = ((Room) getChild(groupPosition, childPosition)).getTipeKamar().toString();
+        final String childText = ((Room) getChild(groupPosition, childPosition)).getRoomNumber();
 
         if (convertView == null) {
             LayoutInflater infalInflater = (LayoutInflater) this._context
@@ -51,7 +54,7 @@ public class MenuListAdapter extends BaseExpandableListAdapter {
         TextView txtListChild = (TextView) convertView
                 .findViewById(R.id.child);
 
-        txtListChild.setText(childText1+" "+childText);
+        txtListChild.setText(childText);
         return convertView;
     }
 
@@ -89,7 +92,7 @@ public class MenuListAdapter extends BaseExpandableListAdapter {
         TextView lblListHeader = (TextView) convertView
                 .findViewById(R.id.groupHeader);
         lblListHeader.setTypeface(null, Typeface.BOLD);
-        lblListHeader.setText(headerTitle);
+        lblListHeader.setText((CharSequence) headerTitle);
 
         return convertView;
     }

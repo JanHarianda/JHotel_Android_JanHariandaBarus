@@ -78,7 +78,7 @@ public class Room {
      * @param roomNumber input yang dimasukkan untuk mengubah data nomor kamar.
      */
 
-    public void setNomorKamar(String roomNumber)
+    public void setRoomNumber(String roomNumber)
     {
         this.roomNumber = roomNumber;
     }

@@ -1,5 +1,6 @@
 package com.example.janbarus.jhotel_android_janhariandabarus;
 
+
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -15,9 +16,9 @@ import com.android.volley.toolbox.Volley;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-import java.lang.StringBuffer;
 
 public class SelesaiPesananActivity extends AppCompatActivity {
+
     private int currentUserId;
     private int id_pesanan;
     private int biaya_akhir;
@@ -28,8 +29,8 @@ public class SelesaiPesananActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selesai_pesanan);
-        Intent i = getIntent();
-        Bundle b = i.getExtras();
+        Intent selesaiPesanan = getIntent();
+        Bundle b = selesaiPesanan.getExtras();
         if(b!=null){
             currentUserId = b.getInt("id_customer");
         }
@@ -51,13 +52,13 @@ public class SelesaiPesananActivity extends AppCompatActivity {
                             JSONObject jsonResponse = new JSONObject(response);
                             if (jsonResponse != null) {
                                 AlertDialog.Builder builder = new AlertDialog.Builder(SelesaiPesananActivity.this);
-                                builder.setMessage("Batal Success")
+                                builder.setMessage("Berhasil Membatalkan Pesanan")
                                         .create()
                                         .show();
                             }
                         } catch (JSONException e) {
                             AlertDialog.Builder builder = new AlertDialog.Builder(SelesaiPesananActivity.this);
-                            builder.setMessage("Batal Failed.")
+                            builder.setMessage("Gagal Membatalkan Pesanan.")
                                     .create()
                                     .show();
                         }
@@ -66,6 +67,7 @@ public class SelesaiPesananActivity extends AppCompatActivity {
                 PesananBatalRequest batalRequest = new PesananBatalRequest(id, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(SelesaiPesananActivity.this);
                 queue.add(batalRequest);
+
             }
         });
 
@@ -80,13 +82,13 @@ public class SelesaiPesananActivity extends AppCompatActivity {
                             JSONObject jsonResponse = new JSONObject(response);
                             if (jsonResponse != null) {
                                 AlertDialog.Builder builder = new AlertDialog.Builder(SelesaiPesananActivity.this);
-                                builder.setMessage("Selesai Success")
+                                builder.setMessage("Berhasil Menyelesaikan Pesanan")
                                         .create()
                                         .show();
                             }
                         } catch (JSONException e) {
                             AlertDialog.Builder builder = new AlertDialog.Builder(SelesaiPesananActivity.this);
-                            builder.setMessage("Selesai Failed.")
+                            builder.setMessage("Gagal Menyelesaikan Pesanan.")
                                     .create()
                                     .show();
                         }
@@ -114,15 +116,11 @@ public class SelesaiPesananActivity extends AppCompatActivity {
                         final TextView hari = (TextView) findViewById(R.id.hari);
                         final Button batal = (Button) findViewById(R.id.batal);
                         final Button selesai = (Button) findViewById(R.id.selesai);
-
                         final RelativeLayout tampilan = (RelativeLayout) findViewById(R.id.tampilan);
                         id_pesanan = jsonResponse.getInt("id");
                         biaya_akhir = jsonResponse.getInt("biaya");
                         jumlah_hari = jsonResponse.getInt("jumlahHari");
                         tanggal = jsonResponse.getString("tanggalPesan");
-                        StringBuffer sb = new StringBuffer(tanggal);
-                        sb.delete(10, tanggal.length()+1);
-                        tanggal = sb.toString();
 
                         idPesanan.setText(String.valueOf(id_pesanan));
                         biaya.setText(String.valueOf(biaya_akhir));
@@ -145,4 +143,6 @@ public class SelesaiPesananActivity extends AppCompatActivity {
         RequestQueue queue = Volley.newRequestQueue(SelesaiPesananActivity.this);
         queue.add(fetchPesananRequest);
     }
+
+
 }
