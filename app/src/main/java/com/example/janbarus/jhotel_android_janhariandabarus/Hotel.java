@@ -1,7 +1,7 @@
 package com.example.janbarus.jhotel_android_janhariandabarus;
 
 /**
- * Created by User on 5/3/2018.
+ * Created by Jan on 5/3/2018.
  */
 
 public class Hotel {
@@ -14,12 +14,13 @@ public class Hotel {
     private int bintang;
 
     /**
-     * Constructor for objects of class Hotel
+     * Method ini merupakan konstruktor yang meng-assign instance variable
      *
-     * @param nama nama hotel
-     * @param lokasi lokasi hotel
-     * @param bintang bintang hotel
+     * @param nama adalah parameter untuk menentukan nama pelanggan
+     * @param lokasi adalah parameter untuk menentukan lokasi hotel
+     * @param bintang adalah parameter untuk memberikan bintang hotel
      */
+
     public Hotel(String nama, Lokasi lokasi, int bintang, int id)
     {
         this.nama = nama;
@@ -29,9 +30,8 @@ public class Hotel {
     }
 
     /**
-     * Mendapatkan nilai bintang
-     *
-     * @return bintang bintang hotel
+     * Method ini adalah accessor untuk mengembalikan nilai bintang hotel
+     * @return bintang mengembalikan bintang hotel
      *
      */
     public int getBintang()
@@ -40,9 +40,9 @@ public class Hotel {
     }
 
     /**
-     * Mendapatkan nilai bintang
+     * Method ini adalah accessor  untuk mengembalikan id hotel
      *
-     * @return id bintang hotel
+     * @return id mengembalikan id hotel
      *
      */
     public int getID()
@@ -51,9 +51,9 @@ public class Hotel {
     }
 
     /**
-     * Mendapatkan nilai nama
+     * Method ini adalah accessor untuk mengembalikan nama hotel
      *
-     * @return nama nama hotel
+     * @return nama mengembalikan nama hotel
      *
      */
     public String getNama()
@@ -62,9 +62,9 @@ public class Hotel {
     }
 
     /**
-     * Mendapatkan nilai lokasi hotel
+     * Method ini adalah accessor untuk mengembalikan lokasi hotel
      *
-     * @return lokasi lokasi hotel
+     * @return lokasi mengembalikan lokasi hotel
      *
      */
     public Lokasi getLokasi()
@@ -73,9 +73,9 @@ public class Hotel {
     }
 
     /**
-     * Memberi nilai nama hotel
+     * Method ini adalah mutator untuk men-set nama hotel
      *
-     * @param nama nama hotel
+     * @param nama adalah nama hotel
      *
      */
     public void setNama(String nama)
@@ -84,9 +84,9 @@ public class Hotel {
     }
 
     /**
-     * Memberi nilai lokasi
+     * Method ini adalah mutator untuk men-set id hotel
      *
-     * @param id id
+     * @param id adalah id hotel
      *
      */
 
@@ -96,9 +96,9 @@ public class Hotel {
     }
 
     /**
-     * Memberi nilai lokasi
+     * Method ini adalah mutator untuk men-set lokasi hotel
      *
-     * @param lokasi lokasi hotel
+     * @param lokasi adalah lokasi hotel
      *
      */
 
@@ -108,9 +108,9 @@ public class Hotel {
     }
 
     /**
-     * Memberi nilai bintang
+     * Method ini adalah mutator untuk men-set bintang hotel
      *
-     * @param bintang bintang hotel
+     * @param bintang adalah bintang hotel
      *
      */
     public void setBintang(int bintang)

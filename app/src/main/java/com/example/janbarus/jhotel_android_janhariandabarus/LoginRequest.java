@@ -5,8 +5,12 @@ import java.util.HashMap;
 import java.util.Map;
 import com.android.volley.Response;
 
+/**
+ * Created by User on 5/1/2018.
+ */
+
 public class LoginRequest extends StringRequest {
-    private static final String Regis_URL = "http://192.168.2.101:8080/logincust";
+    private static final String Regis_URL = "http://192.168.43.186:8080/logincust";
     private Map<String, String> params;
 
     public LoginRequest(String email, String password,  Response.Listener<String> listener) {
@@ -20,5 +24,3 @@ public class LoginRequest extends StringRequest {
         return params;
     }
 }
-
-

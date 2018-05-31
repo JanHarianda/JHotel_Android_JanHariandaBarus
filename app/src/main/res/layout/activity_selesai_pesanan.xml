@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.android.jhotel_android_janhariandabarus.SelesaiPesananActivity">
+    android:background="@drawable/train"
+    tools:context="com.example.janbarus.jhotel_android_janhariandabarus.SelesaiPesananActivity">
 
     <RelativeLayout
         android:id="@+id/tampilan"
@@ -14,26 +15,42 @@
         android:layout_centerVertical="true"
         android:gravity="center"
         android:orientation="vertical"
-        android:visibility="visible">
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="362dp">
+
+        <TextView
+            android:id="@+id/TextView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dip"
+            android:text="CANCEL OR FINISH"
+            android:textColor="#000000"
+            android:textSize="24dip" />
 
         <TextView
             android:id="@+id/staticIdPesanan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/TextView2"
             android:layout_marginTop="20dp"
             android:gravity="left"
             android:text="ID Pesanan:"
             android:textAlignment="center"
+            android:textColor="#000000"
             android:textSize="18sp" />
 
         <TextView
             android:id="@+id/idPesanan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/TextView2"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:layout_toRightOf="@id/staticIdPesanan"
             android:text="TextView"
+            android:textColor="#000000"
             android:textSize="18sp" />
 
         <TextView
@@ -43,6 +60,7 @@
             android:layout_below="@id/staticIdPesanan"
             android:layout_marginTop="20dp"
             android:text="Biaya:"
+            android:textColor="#000000"
             android:textSize="18sp" />
 
         <TextView
@@ -54,6 +72,7 @@
             android:layout_marginTop="20dp"
             android:layout_toRightOf="@id/staticIdPesanan"
             android:text="TextView"
+            android:textColor="#000000"
             android:textSize="18sp" />
 
         <TextView
@@ -63,6 +82,7 @@
             android:layout_below="@id/staticBiaya"
             android:layout_marginTop="20dp"
             android:text="Jumlah Hari: "
+            android:textColor="#000000"
             android:textSize="18sp" />
 
         <TextView
@@ -74,6 +94,7 @@
             android:layout_marginTop="20dp"
             android:layout_toRightOf="@id/staticIdPesanan"
             android:text="TextView"
+            android:textColor="#000000"
             android:textSize="18sp" />
 
         <TextView
@@ -83,6 +104,7 @@
             android:layout_below="@id/staticHari"
             android:layout_marginTop="20dp"
             android:text="Tanggal: "
+            android:textColor="#000000"
             android:textSize="18sp" />
 
         <TextView
@@ -94,6 +116,7 @@
             android:layout_marginTop="20dp"
             android:layout_toRightOf="@id/staticIdPesanan"
             android:text="TextView"
+            android:textColor="#000000"
             android:textSize="18sp" />
 
         <Button
@@ -102,6 +125,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/tanggal_pesan"
             android:layout_marginLeft="80dp"
+            android:layout_marginTop="20dp"
+            android:background="#448AFF"
             android:text="Batal" />
 
         <Button
@@ -110,6 +135,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/batal"
             android:layout_marginLeft="80dp"
+            android:layout_marginTop="20dp"
+            android:background="#448AFF"
             android:text="Selesai" />
 
     </RelativeLayout>

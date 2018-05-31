@@ -28,7 +28,7 @@ public class Room {
      * @return String mengembalikan data nomor kamar.
      */
 
-    public String getNomorKamar()
+    public String getRoomNumber()
     {
         return roomNumber;
     }
@@ -65,7 +65,7 @@ public class Room {
 
     /**
      * Method yang digunakan untuk mengubah data hotel.
-     * @param hotelIn input yang dimasukkan untuk mengubah data hotel.
+     * @param tipeKamar yang dimasukkan untuk mengubah data hotel.
      */
 
     public void setTipeKamar(String tipeKamar)

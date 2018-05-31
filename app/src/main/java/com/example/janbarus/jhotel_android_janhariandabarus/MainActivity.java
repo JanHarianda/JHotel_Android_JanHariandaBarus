@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
                                                                 Room selected = childMapping.get(listHotel.get(groupPosition)).get(childPosition);
                                                                 Intent intent = new Intent(MainActivity.this, BuatPesananActivity.class);
                                                                 intent.putExtra("id_customer", currentUserId);
-                                                                intent.putExtra("nomorKamar", selected.getNomorKamar());
+                                                                intent.putExtra("nomorKamar", selected.getRoomNumber());
                                                                 intent.putExtra("dailyTariff", selected.getDailyTariff());
                                                                 intent.putExtra("id_hotel", listHotel.get(groupPosition).getID());
                                                                 startActivity(intent);

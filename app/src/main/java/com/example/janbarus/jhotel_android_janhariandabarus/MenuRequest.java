@@ -10,7 +10,7 @@ import com.android.volley.Response;
  */
 
 public class MenuRequest extends StringRequest{
-    private static final String Regis_URL = "http://192.168.2.101:8080/vacantrooms";
+    private static final String Regis_URL = "http://192.168.43.186:8080/vacantrooms";
     private Map<String, String> params;
 
     public MenuRequest(Response.Listener<String> listener) {

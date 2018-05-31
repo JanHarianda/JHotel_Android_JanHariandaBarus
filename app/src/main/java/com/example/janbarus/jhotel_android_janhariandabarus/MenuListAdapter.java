@@ -39,7 +39,8 @@ public class MenuListAdapter extends BaseExpandableListAdapter {
     public View getChildView(int groupPosition, final int childPosition,
                              boolean isLastChild, View convertView, ViewGroup parent) {
 
-        final String childText = ((Room) getChild(groupPosition, childPosition)).getNomorKamar();
+        final String childText = ((Room) getChild(groupPosition, childPosition)).getRoomNumber().toString();
+        final String childText1 = ((Room) getChild(groupPosition, childPosition)).getTipeKamar().toString();
 
         if (convertView == null) {
             LayoutInflater infalInflater = (LayoutInflater) this._context
@@ -50,7 +51,7 @@ public class MenuListAdapter extends BaseExpandableListAdapter {
         TextView txtListChild = (TextView) convertView
                 .findViewById(R.id.child);
 
-        txtListChild.setText(childText);
+        txtListChild.setText(childText1+" "+childText);
         return convertView;
     }
 

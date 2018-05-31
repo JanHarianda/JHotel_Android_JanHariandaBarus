@@ -1,20 +1,21 @@
 package com.example.janbarus.jhotel_android_janhariandabarus;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.AlertDialog;
 import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.Button;
+import android.view.*;
 import android.widget.TextView;
-import android.view.View;
-import android.app.AlertDialog;
-import android.content.Intent;
+
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.android.volley.RequestQueue;
-import com.android.volley.toolbox.Volley;
-import com.android.volley.Response;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -28,9 +29,11 @@ public class LoginActivity extends AppCompatActivity {
         final TextView registerClickable = (TextView) findViewById(R.id.registerClick);
         registerClickable.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
                 Intent regisInt = new Intent(LoginActivity.this, RegisterActivity.class);
                 LoginActivity.this.startActivity(regisInt);
+
             }
         });
         loginButton.setOnClickListener(new View.OnClickListener() {
@@ -38,12 +41,16 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 final String email = emailInput.getText().toString();
                 final String password = passInput.getText().toString();
-                Response.Listener<String> responseListener = new Response.Listener<String> () {
+                Response.Listener<String> responseListener = new Response.Listener<String> ()
+                {
                     @Override
-                    public void onResponse(String response) {
-                        try{
+                    public void onResponse(String response)
+                    {
+                        try
+                        {
                             JSONObject jsonResponse = new JSONObject(response);
-                            if(jsonResponse!=null) {
+                            if(jsonResponse!=null)
+                            {
                                 AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
                                 builder.setMessage("Login Success")
                                         .create()
@@ -52,7 +59,9 @@ public class LoginActivity extends AppCompatActivity {
                                 mainInt.putExtra("id_customer", jsonResponse.getInt("id"));
                                 LoginActivity.this.startActivity(mainInt);
                             }
-                        } catch (JSONException e) {
+                        }
+                        catch (JSONException e)
+                        {
                             AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
                             builder.setMessage("Login Failed.")
                                     .create()
@@ -66,4 +75,5 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
+
 }

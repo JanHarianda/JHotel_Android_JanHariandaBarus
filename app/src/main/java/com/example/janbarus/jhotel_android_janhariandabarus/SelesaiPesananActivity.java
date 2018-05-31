@@ -15,6 +15,7 @@ import com.android.volley.toolbox.Volley;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import java.lang.StringBuffer;
 
 public class SelesaiPesananActivity extends AppCompatActivity {
     private int currentUserId;
@@ -119,6 +120,9 @@ public class SelesaiPesananActivity extends AppCompatActivity {
                         biaya_akhir = jsonResponse.getInt("biaya");
                         jumlah_hari = jsonResponse.getInt("jumlahHari");
                         tanggal = jsonResponse.getString("tanggalPesan");
+                        StringBuffer sb = new StringBuffer(tanggal);
+                        sb.delete(10, tanggal.length()+1);
+                        tanggal = sb.toString();
 
                         idPesanan.setText(String.valueOf(id_pesanan));
                         biaya.setText(String.valueOf(biaya_akhir));

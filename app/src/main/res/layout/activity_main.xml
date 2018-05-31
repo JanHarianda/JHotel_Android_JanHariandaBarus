@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.android.jhotel_android_janhariandabarus.MainActivity">
+    android:background="@drawable/train"
+    tools:context="com.example.janbarus.jhotel_android_janhariandabarus.MainActivity">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -12,10 +13,21 @@
         android:orientation="vertical"
         android:visibility="visible">
 
+        <TextView
+            android:id="@+id/TextView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dip"
+            android:text="PILIH KAMAR"
+            android:textColor="#000000"
+            android:textSize="24dip" />
+
         <ExpandableListView
             android:id="@+id/expandHotel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:divider="#f00"
             android:listSelector="#36f"></ExpandableListView>
 
@@ -24,7 +36,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/expandHotel"
-            android:text="Pesanan" />
+            android:layout_gravity="center"
+            android:text="Cancel or Finish" />
     </LinearLayout>
 
 

@@ -1,12 +1,11 @@
-
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/train"
-    tools:context="com.example.janbarus.jhotel_android_janhariandabarus.BuatPesananActivity">
+    tools:context="com.example.janbarus.jhotel_android_janhariandabarus.DetailRoomActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -16,26 +15,16 @@
         android:gravity="center"
         android:orientation="vertical"
         android:visibility="visible">
-        <TextView
-            android:id="@+id/TextView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dip"
-            android:text="        ORDER NOW"
-            android:textColor="#000000"
-            android:textSize="24dip" />
 
         <TextView
             android:id="@+id/staticRoomNumber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:layout_below="@id/TextView2"
+            android:textColor="#000000"
             android:gravity="left"
             android:text="Room Number:"
             android:textAlignment="center"
-            android:textColor="#000000"
             android:textSize="18sp" />
 
         <TextView
@@ -44,10 +33,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
-            android:layout_below="@id/TextView2"
             android:layout_toRightOf="@id/staticRoomNumber"
-            android:textColor="#000000"
             android:text="TextView"
+            android:textColor="#000000"
             android:textSize="18sp" />
 
         <TextView
@@ -73,68 +61,56 @@
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/staticDurasi"
+            android:id="@+id/statusKamar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/staticTariff"
             android:layout_marginTop="20dp"
-            android:text="Durasi: "
+            android:text="Status Kamar: "
             android:textColor="#000000"
             android:textSize="18sp" />
 
-        <EditText
-            android:id="@+id/durasi_hari"
+        <TextView
+            android:id="@+id/statusKamarText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/statusKamar"
             android:layout_below="@id/tariff"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_toRightOf="@id/staticRoomNumber"
-            android:backgroundTint="#000000"
-            android:textColor="#000000"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/staticTotal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/durasi_hari"
-            android:layout_marginTop="20dp"
-            android:textColor="#000000"
-            android:text="Total: "
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/total_biaya"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_toRightOf="@id/staticRoomNumber"
-            android:layout_below="@id/durasi_hari"
             android:textColor="#000000"
             android:text="TextView"
             android:textSize="18sp" />
 
-        <Button
-            android:id="@+id/hitung"
+        <TextView
+            android:id="@+id/tipeKamar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/total_biaya"
+            android:layout_below="@id/statusKamar"
             android:layout_marginTop="20dp"
-            android:layout_marginLeft="80dp"
-            android:background="#448AFF"
-            android:text="Hitung" />
+            android:text="Tipe Kamar: "
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tipeKamarText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/tipeKamar"
+            android:layout_below="@id/statusKamarText"
+            android:textColor="#000000"
+            android:text="TextView"
+            android:textSize="18sp" />
+
 
         <Button
-            android:id="@+id/pesan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/hitung"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="80dp"
-            android:background="#448AFF"
-            android:text="Pesan" />
+            android:id="@+id/gambar"
+            android:layout_width="300dip"
+            android:layout_height="300dip"
+            android:layout_below="@id/tipeKamar"
+            android:layout_marginTop="20dp" />
 
     </RelativeLayout>
 

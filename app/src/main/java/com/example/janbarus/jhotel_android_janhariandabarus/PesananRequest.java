@@ -10,7 +10,7 @@ import com.android.volley.Response;
  */
 
 public class PesananRequest extends StringRequest {
-    private static final String Regis_URL = "http://192.168.2.101:8080/bookpesanan";
+    private static final String Regis_URL = "http://192.168.43.186:8080/bookpesanan";
     private Map<String, String> params;
 
     public PesananRequest(String jumlah_hari, String id_customer, String id_hotel, String nomor_kamar,  Response.Listener<String> listener) {
